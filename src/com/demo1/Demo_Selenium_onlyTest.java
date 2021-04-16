@@ -37,10 +37,10 @@ public class Demo_Selenium_onlyTest {
 		
 		driver.manage().window().maximize();
 
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		//driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		Thread.sleep(2000);
+	//	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Thread.sleep(1000);
 		driver.findElement(By.id("at-cv-lightbox-close")).click();
 		
 	
@@ -64,7 +64,7 @@ public class Demo_Selenium_onlyTest {
 		
 	
 	/*
-	 * This method will apply radio button and check box
+	 * This methods will apply radio button and check box
 	 */
 	
 		driver.findElement(By.linkText("Input Forms")).click();
@@ -157,6 +157,11 @@ public class Demo_Selenium_onlyTest {
 			driver.findElement(By.xpath("//button[@onclick='return total()']")).click();
 			Thread.sleep(2000);
 			
+			//This will write value of element
+			String slogan = driver.findElement(By.id("site-slogan")).getText();
+			System.out.println("Slogan of webpage is "+slogan);
+			
+			//Validation starts from here
 			String actualResult1 = driver.findElement(By.id("displayvalue")).getText();
 			
 			String expectedResult="12";
@@ -164,7 +169,7 @@ public class Demo_Selenium_onlyTest {
 		    System.out.println("actual ->"+actualResult1);
 		
 	/*
-	 * This method will close windows
+	 * This method will handle windows
 	 */
 			
 		driver.findElement(By.linkText("Alerts & Modals")).click();

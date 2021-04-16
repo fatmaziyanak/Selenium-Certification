@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18023" started-at="2021-04-15T23:52:25 CDT" finished-at="2021-04-15T23:52:43 CDT">
+  <suite name="Default suite" duration-ms="67656" started-at="2021-04-16T11:25:24 CDT" finished-at="2021-04-16T11:26:31 CDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18023" started-at="2021-04-15T23:52:25 CDT" finished-at="2021-04-15T23:52:43 CDT">
-      <class name="com.demo1.ConfigsReader">
-        <test-method status="PASS" signature="validationViaLongWay()[pri:0, instance:com.demo1.ConfigsReader@369f73a2]" name="validationViaLongWay" duration-ms="17988" started-at="2021-04-15T23:52:25 CDT" finished-at="2021-04-15T23:52:43 CDT">
+    <test name="Default test" duration-ms="67656" started-at="2021-04-16T11:25:24 CDT" finished-at="2021-04-16T11:26:31 CDT">
+      <class name="com.demo1.Demo_Selenium_onlyTest">
+        <test-method status="PASS" signature="test()[pri:0, instance:com.demo1.Demo_Selenium_onlyTest@369f73a2]" name="test" duration-ms="67608" started-at="2021-04-16T11:25:24 CDT" finished-at="2021-04-16T11:26:31 CDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validationViaLongWay -->
-      </class> <!-- com.demo1.ConfigsReader -->
+        </test-method> <!-- test -->
+      </class> <!-- com.demo1.Demo_Selenium_onlyTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

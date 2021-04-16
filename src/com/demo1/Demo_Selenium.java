@@ -65,7 +65,7 @@ public class Demo_Selenium {
 		}
 	
 	/*
-	 * This method will apply radio button and check box
+	 * This method will apply check box
 	 */
 	//@Test
 	public void checkBox () throws InterruptedException {
@@ -87,7 +87,10 @@ public class Demo_Selenium {
 		
 	}
 	
-	@Test
+	/*
+	 * This method will apply radio button
+	 */
+	//@Test
 	public void RadioButton() throws InterruptedException {
 		
 		driver.findElement(By.linkText("Input Forms")).click();
@@ -145,20 +148,20 @@ public class Demo_Selenium {
 		for(int i=0; i<rows.size(); i++) {
 
 			String rowText=rows.get(i).getText();
-		}
-	    //  System.out.println(rowText);}
+		//}
+	      System.out.println(rowText);}}
 		
-		WebElement firstRow = driver.findElement(By.xpath("//table[@id='task-table']/tbody/tr[1]"));
-        System.out.println(firstRow.getText());
-    	WebElement secondRow = driver.findElement(By.xpath("//table[@id='task-table']/tbody/tr[2]/td[2]"));
-        System.out.println(secondRow.getText());}
-	
+//		WebElement firstRow = driver.findElement(By.xpath("//table[@id='task-table']/tbody/tr[1]"));
+//        System.out.println(firstRow.getText());
+//    	WebElement secondRow = driver.findElement(By.xpath("//table[@id='task-table']/tbody/tr[2]/td[2]"));
+//        System.out.println(secondRow.getText());}
+//	
 	
 	/*
 	 * This method will validate the data
 	 */
 	
-	//@Test
+	@Test
 	public void validation() throws InterruptedException {
 		
 			driver.findElement(By.id("btn_basic_example")).click();
@@ -170,14 +173,19 @@ public class Demo_Selenium {
 			driver.findElement(By.xpath("//button[@onclick='return total()']")).click();
 			Thread.sleep(2000);
 			
+			//This will write value of element
+			String slogan = driver.findElement(By.id("site-slogan")).getText();
+			System.out.println("Slogan of webpage is "+slogan);
+			
+			//Validation start from here
 			String actualResult = driver.findElement(By.id("displayvalue")).getText();
 			
 			String expectedResult="12";
 			Assert.assertEquals(actualResult, expectedResult); //validation
-		    System.out.println("actual ->"+actualResult);
+		  //  System.out.println("actual ->"+actualResult);
 		}
 	/*
-	 * This method will close windows
+	 * This method will handle windows
 	 */
 	//@Test
 	public void windows() throws InterruptedException {
@@ -214,6 +222,8 @@ public class Demo_Selenium {
 		System.out.println("Title of child window is "+driver.getTitle());
 		
 		driver.switchTo().window(parentW);
+		System.out.println("Title of main window is "+driver.getTitle());
+		
 	}
 
 	@AfterMethod(alwaysRun=true)
